@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { ReactComponent as NotionIcon } from './images/NotionIcon.svg';
 
 const headerStyles = css`
   display: flex;
@@ -167,6 +166,7 @@ const iconsStyles = css`
   max-width: 50px;
   max-height: 50px;
 `;
+
 // Centralize
 const headingParagraphStyles = css`
   display: flex;
@@ -174,11 +174,18 @@ const headingParagraphStyles = css`
   align-items: center;
   text-align: center;
   margin: 20px;
+
+  p {
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+    text-align: center;
+  }
 `;
 
 const centralizeImgStyles = css`
   max-width: 450px;
-  max-height: 354px;
+  max-height: 350px;
 `;
 
 const centralizeImgContainerStyles = css`
@@ -190,18 +197,27 @@ const centralizeImgContainerStyles = css`
 const centralizeImgSubContainerStyles = css`
   max-width: 490px;
   max-height: 605px;
-  border-radius: 10px;
+  border-radius: 35px;
   background-color: #fff;
   text-align: justify;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   h3 {
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 700;
-    padding-left: 15px;
+    padding-left: 20px;
+    font-size: 35px;
   }
 
   p {
-    padding: 0 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: Sora, sans-serif;
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: 400;
   }
 
   &.purpleBackground {
@@ -224,7 +240,6 @@ const whiteButtonStyles = css`
   display: flex;
   gap: 20px;
   justify-content: left;
-  margin: 20px;
 
   a {
     border-radius: 6px;
@@ -239,8 +254,8 @@ const whiteButtonStyles = css`
 const smartViewStyles = css`
   display: flex;
   gap: 20px;
-  padding-top: 30px;
-  padding-left: 20px;
+  padding-top: 40px;
+  padding-left: 40px;
   justify-content: space-around;
   max-width: 1000px;
   max-height: 400px;
@@ -249,22 +264,29 @@ const smartViewStyles = css`
 
   h3 {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 30px;
     font-weight: 700;
-    padding-left: 15px;
+    font-size: 35px;
+    line-height: 36px;
+    margin: 0;
   }
 
   p {
     padding: 0 15px;
     font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 19px;
+    padding-right: 40px;
+    padding-left: 0px;
+    line-height: 34px;
   }
 
   img {
     max-width: 500px;
     max-height: 365px;
-    // margin-bottom: -30px;
-    // padding-right: 10px;
     vertical-align: middle;
+    margin-right: 30px;
   }
 `;
 // professional + personal
@@ -291,10 +313,16 @@ const professionalPersonalStyles = css`
     font-family: 'Montserrat', sans-serif !important;
     font-size: 30px;
     font-weight: 700;
+    margin: 0;
   }
 
   p {
+    margin-top: 19px;
+    padding-left: 0px;
     font-size: 18px;
+    line-height: 34px;
+    font-weight: 400;
+    text-align: justify;
   }
 `;
 
@@ -321,14 +349,21 @@ const progressHeadingParagraphStyles = css`
 
   p {
     text-align: center;
+    padding: 0 15px;
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+    margin-top: 19px;
+    padding-right: 40px;
+    padding-left: 0px;
+    line-height: 36px;
   }
 `;
 
-// progress
 const progressImgSubContainerStyles = css`
   max-width: 490px;
   max-height: 605px;
-  border-radius: 10px;
+  border-radius: 25px;
   background-color: #fff;
   text-align: justify;
 
@@ -336,10 +371,17 @@ const progressImgSubContainerStyles = css`
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 700;
     padding-left: 15px;
+    padding-left: 20px;
+    font-size: 35px;
   }
 
   p {
-    padding: 0 15px;
+    padding-right: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: 400;
+    text-align: justify;
   }
 
   &.orangeBackground {
@@ -347,11 +389,32 @@ const progressImgSubContainerStyles = css`
     color: #fff;
   }
 `;
+
+const h3WhiteBgStyles = css`
+  margin: 12px;
+`;
+
+const pWhiteBgStyles = css`
+  padding-right: 0 !important;
+  text-align: justify !important;
+`;
+
 // karin-app img
 const orangeContainerImgStyles = css`
   max-width: 450px;
   max-height: 354px;
   vertical-align: middle;
+  margin-top: 46px;
+`;
+
+const whiteContainerIngStyles = css`
+  display: inline-block;
+  width: 370px;
+  margin-right: auto;
+  margin-left: 40px;
+  text-align: center;
+  padding: 20px 40px;
+  margin-top: 80px;
 `;
 
 // rates
@@ -376,47 +439,9 @@ const rateHeadingParagraphStyles = css`
   }
 `;
 
-const ratesContainerStyles = css`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 35px;
-  max-width: 1200px;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 40px;
-  padding-right: 20px;
-  padding-left: 20px;
-
-  a {
-    text-decoration: none;
-    justify-content: center;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    padding: 10px 70px;
-    border-radius: 6px;
-    margin-left: 10px;
-  }
-`;
-
-const ratesSubContainerstyles = css`
-  background-color: #fff;
-  border: 2px solid #000;
-  border-radius: 20px;
-  padding-bottom: 46px;
-  line-height: 250%;
-  max-width: 300px;
-  max-height: 500px;
-  margin-right: 0;
-  padding-right: 0;
-
-  h4 {
-    margin-left: 10px;
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: bold;
-  }
+const ratesStyles = css`
+  max-width: 1240px;
+  max-height: 400px;
 `;
 
 function App() {
@@ -477,15 +502,15 @@ function App() {
               </div>
               <br />
               <br />
+              {/* animated divs */}
               <div>
-                {/* animated divs */}
                 <div css={firstDivStyles}>
                   <img src="/centralize.svg" alt="centralize" />
                   2-Way Integration
                   <br />
                   <img
                     css={iconsStyles}
-                    sr="/slack-logo.png"
+                    src="/slack-logo.png"
                     alt="Slack logo"
                   />
                   Linked to Slack
@@ -506,7 +531,7 @@ function App() {
                   <br />
                   <img
                     css={iconsStyles}
-                    sr="/thumbsup.png"
+                    src="/thumbsup.png"
                     alt="Thumbs up man emoji"
                   />
                   Flexible view
@@ -515,7 +540,11 @@ function App() {
                   <img src="/progress.svg" alt="progress" />
                   Updates Your Tools
                   <br />
-                  <img src={NotionIcon} alt="Notion logo" />
+                  <img
+                    css={iconsStyles}
+                    src="/notionIcon.svg"
+                    alt="Notion logo"
+                  />
                   No More Follow-Up
                   <br />
                   <img
@@ -637,14 +666,14 @@ function App() {
                     />
                   </div>
                   <div css={centralizeImgSubContainerStyles}>
-                    <h3>Share the load</h3>
-                    <p>
+                    <h3 css={h3WhiteBgStyles}>Share the load</h3>
+                    <p css={pWhiteBgStyles}>
                       Share projects from Kairn with your team, they'll receive
                       it in Slack - even non Kairn users. When they progress,
                       you're directly updated.
                     </p>
                     <img
-                      css={centralizeImgStyles}
+                      css={whiteContainerIngStyles}
                       src="connect.png"
                       alt="emojis"
                     />
@@ -657,41 +686,11 @@ function App() {
               <div css={rateHeadingParagraphStyles}>
                 <h2>Stop putting out fires, start achieving</h2>
                 <p>Currently in free beta save your early-bird spot!</p>
-                <div css={ratesContainerStyles}>
-                  <div css={ratesSubContainerstyles}>
-                    <h4>For busy people</h4>
-                    <p>FREE</p>
-                    <a href="/">Try Kairn!</a>
-                    <ul>
-                      <li>Unlimited projects</li>
-                      <li>Unlimited connected apps</li>
-                      <li>Unlimited memebers</li>
-                      <li>Up to 500 tasks updated per month</li>
-                    </ul>
-                  </div>
-                  <div css={ratesSubContainerstyles}>
-                    <h4>For busy teams</h4>
-                    <p>$5 /month /user</p>
-                    <a href="/">Try Kairn!</a>
-                    <ul>
-                      <li>BUSY PEOPLE FEATURES</li>
-                      <li>Unlimited tasks updates</li>
-                      <li>Activity log SOON</li>
-                      <li>Collaborative Workspace SOON</li>
-                    </ul>
-                  </div>
-                  <div css={ratesSubContainerstyles}>
-                    <h4>For big busy teams</h4>
-                    <p>$10 /month /user</p>
-                    <a href="/">Coming soon</a>
-                    <ul>
-                      <li>BUSY TEAMS FEATURES</li>
-                      <li>Permission management</li>
-                      <li>Admin tool</li>
-                      <li>Public boards &amp; guests</li>
-                    </ul>
-                  </div>
-                </div>
+                <br />
+                <br />
+              </div>
+              <div css={ratesStyles}>
+                <img src="/rates2.npg" alt="rates" />
               </div>
               <br />
               <br />
