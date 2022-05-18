@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import './App.css';
 import { css } from '@emotion/react';
+import { ReactComponent as NotionIcon } from './images/NotionIcon.svg';
 
 const headerStyles = css`
   display: flex;
@@ -9,6 +9,7 @@ const headerStyles = css`
   border-width: 1px;
   border-color: #000;
   padding: 20px 70px;
+  margin-top: 10px;
 `;
 
 const heroStyles = css`
@@ -18,7 +19,7 @@ const heroStyles = css`
 `;
 
 const wrapperStyles = css`
-  max-width: 1600px;
+  max-width: 1900px;
   width: 100%;
 `;
 // Logo
@@ -33,6 +34,15 @@ const logoBadgeContainerStyles = css`
   justify-content: flex-start;
   gap: 20px;
 `;
+
+const badgeStyles = css`
+  width: 200px;
+  height: 54px;
+  margin-left: 45px;
+  margin-top: -10px;
+  margin-left: 22px;
+`;
+
 // Navigation bar
 const navMenuStyles = css`
   list-style-type: none;
@@ -50,37 +60,66 @@ const navMenuStyles = css`
   }
 `;
 
-const buttonLikeStyles = css`
+const buttonStyles = css`
   text-decoration: none;
+  border: 2px solid #222325;
   background-color: #000;
-  color: #fff;
-  max-width: 160px;
-  max-height: 40px;
-  margin-top: 0px;
+  padding: 17px;
+  color: #fff !important;
+  outline: none;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  width: auto;
+  border-radius: 4px;
+  transition: transform 200ms ease-in-out;
+  font-family: Sora, sans-serif;
+  font-size: 18px !important;
+  font-weight: 600 !important;
 
-  a {
-    border-radius: 6px;
-    max-width: 170px;
-    max-height: 60px;
-    font-size: 15px;
-    background-color: #fff;
-    padding: 9px 15px;
+  &:before {
+    z-index: 0;
+    margin-top: 0px;
+    border: 1px none #000;
+    color: #fff;
+    line-height: 20px;
+  }
+
+  &:after {
+    position: absolute;
+    width: 94%;
+    height: 94%;
+    left: -6px;
+    top: 6px;
+    border-radius: 4px;
+    border: 2px solid #222325;
+    content: '';
+    z-index: 0;
   }
 `;
 // hero section
 const heroSectionStyles = css`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 36px;
+  gap: 30px;
 
   h1 {
     font-size: 60px;
     font-family: 'Montserrat', sans-serif !important;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: Sora, sans-serif;
+    color: #222325;
+    font-size: 22px;
+    line-height: 38px;
   }
 
   img {
-    max-width: 450px;
-    max-height: 400px;
+    max-width: 570px;
+    max-height: 560px;
   }
 `;
 const controlStyles = css`
@@ -123,6 +162,11 @@ const h2Styles = css`
   font-family: 'Montserrat', sans-serif !important;
   margin-bottom: 10px;
 `;
+
+const iconsStyles = css`
+  max-width: 50px;
+  max-height: 50px;
+`;
 // Centralize
 const headingParagraphStyles = css`
   display: flex;
@@ -140,7 +184,7 @@ const centralizeImgStyles = css`
 const centralizeImgContainerStyles = css`
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 `;
 
 const centralizeImgSubContainerStyles = css`
@@ -218,8 +262,9 @@ const smartViewStyles = css`
   img {
     max-width: 500px;
     max-height: 365px;
-    margin-bottom: -30px;
-    padding-right: 10px;
+    // margin-bottom: -30px;
+    // padding-right: 10px;
+    vertical-align: middle;
   }
 `;
 // professional + personal
@@ -261,16 +306,134 @@ const iconsImgStyles = css`
   padding-left: 20px;
 `;
 
+// progress
+const progressHeadingParagraphStyles = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif !important;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+  }
+`;
+
+// progress
+const progressImgSubContainerStyles = css`
+  max-width: 490px;
+  max-height: 605px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: justify;
+
+  h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700;
+    padding-left: 15px;
+  }
+
+  p {
+    padding: 0 15px;
+  }
+
+  &.orangeBackground {
+    background-color: #fc7557;
+    color: #fff;
+  }
+`;
+// karin-app img
+const orangeContainerImgStyles = css`
+  max-width: 450px;
+  max-height: 354px;
+  vertical-align: middle;
+`;
+
+// rates
+const rateHeadingParagraphStyles = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+
+  h2 {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif !important;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  p {
+    text-align: left;
+    padding: 10px;
+    color: #fff;
+  }
+`;
+
+const ratesContainerStyles = css`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 35px;
+  max-width: 1200px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  a {
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 70px;
+    border-radius: 6px;
+    margin-left: 10px;
+  }
+`;
+
+const ratesSubContainerstyles = css`
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding-bottom: 46px;
+  line-height: 250%;
+  max-width: 300px;
+  max-height: 500px;
+  margin-right: 0;
+  padding-right: 0;
+
+  h4 {
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: bold;
+  }
+`;
+
 function App() {
   return (
-    <div>
+    <>
       <main>
         <div css={heroStyles}>
           <div css={wrapperStyles}>
             <header css={headerStyles}>
               <div css={logoBadgeContainerStyles}>
                 <img css={logoStyles} src="/Kairn-logo@3x.png" alt="logo" />
-                <img src="/top-post-badge.svg" alt="top-badge" />
+                <img
+                  css={badgeStyles}
+                  className="badge"
+                  src="/top-post-badge.svg"
+                  alt="top-badge"
+                />
               </div>
               <nav>
                 <ul css={navMenuStyles}>
@@ -284,8 +447,8 @@ function App() {
                     <a href="/">Sign in</a>
                   </li>
                   <li>
-                    <a css={buttonLikeStyles} href="/">
-                      Try Kairn!
+                    <a css={buttonStyles} href="/">
+                      <strong>Try Kairn!</strong>
                     </a>
                   </li>
                 </ul>
@@ -298,13 +461,15 @@ function App() {
                     Regain <strong css={controlStyles}>control</strong> <br />
                     over your days
                   </h1>
-                  <h3>
-                    Stop rushing - centralize, prioritize and progress on
+                  <p>
+                    Stop rushing - centralize, prioritize and progress <br /> on
                     projects across apps on a daily basis
-                  </h3>
+                  </p>
                   <div>
-                    <div css={buttonLikeStyles}>
-                      <a href="/">Try Kairn!</a>
+                    <div>
+                      <a css={buttonStyles} href="/">
+                        Try Kairn!
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -318,30 +483,46 @@ function App() {
                   <img src="/centralize.svg" alt="centralize" />
                   2-Way Integration
                   <br />
-                  <img sr="/slack-logo.png" alt="Slack logo" />
+                  <img
+                    css={iconsStyles}
+                    sr="/slack-logo.png"
+                    alt="Slack logo"
+                  />
                   Linked to Slack
                   <br />
-                  <img src="/granma.png" alt="granma" />
+                  <img css={iconsStyles} src="/granma.png" alt="granma" />
                   Quick Capture
                 </div>
                 <div css={secondDivStyles}>
                   <img src="/prioritize.svg" alt="prioritize" />
                   Smart Scoring
                   <br />
-                  <img src="/flower-logo.png" alt="flower logo" />
+                  <img
+                    css={iconsStyles}
+                    src="/flower-logo.png"
+                    alt="flower logo"
+                  />
                   Professional &amp; Personal
                   <br />
-                  <img sr="/thumbsup.png" alt="Thumbs up man emoji" />
+                  <img
+                    css={iconsStyles}
+                    sr="/thumbsup.png"
+                    alt="Thumbs up man emoji"
+                  />
                   Flexible view
                 </div>
                 <div css={thirdDivStyles}>
                   <img src="/progress.svg" alt="progress" />
                   Updates Your Tools
                   <br />
-                  <img sr="/icon-notion.svg" alt="Notion logo" />
+                  <img src={NotionIcon} alt="Notion logo" />
                   No More Follow-Up
                   <br />
-                  <img src="/beardedman.png" alt="Bearded man emoji" />
+                  <img
+                    css={iconsStyles}
+                    src="/beardedman.png"
+                    alt="Bearded man emoji"
+                  />
                   Delegate With Ease
                 </div>
               </div>
@@ -429,12 +610,97 @@ function App() {
                   </div>
                 </div>
               </div>
+              {/* progress */}
+              <div css={progressHeadingParagraphStyles}>
+                <h2>Progress</h2>
+                <p>
+                  Never lose precious time updating tools' statuses or asking
+                  your team for updates. <br />
+                  Kairn connects it all so you focus on doing instead of running
+                  around.
+                </p>
+                <div css={centralizeImgContainerStyles}>
+                  <div
+                    className="orangeBackground"
+                    css={progressImgSubContainerStyles}
+                  >
+                    <h3>Supercharge your apps</h3>
+                    <p>
+                      Kairn updates synced tools. When you mark tasks as done on
+                      Kairn, it updates tools back, so your projects keep on
+                      progressing!
+                    </p>
+                    <img
+                      css={orangeContainerImgStyles}
+                      src="/karin-app.png"
+                      alt="app-icons"
+                    />
+                  </div>
+                  <div css={centralizeImgSubContainerStyles}>
+                    <h3>Share the load</h3>
+                    <p>
+                      Share projects from Kairn with your team, they'll receive
+                      it in Slack - even non Kairn users. When they progress,
+                      you're directly updated.
+                    </p>
+                    <img
+                      css={centralizeImgStyles}
+                      src="connect.png"
+                      alt="emojis"
+                    />
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+              {/* rates */}
+              <div css={rateHeadingParagraphStyles}>
+                <h2>Stop putting out fires, start achieving</h2>
+                <p>Currently in free beta save your early-bird spot!</p>
+                <div css={ratesContainerStyles}>
+                  <div css={ratesSubContainerstyles}>
+                    <h4>For busy people</h4>
+                    <p>FREE</p>
+                    <a href="/">Try Kairn!</a>
+                    <ul>
+                      <li>Unlimited projects</li>
+                      <li>Unlimited connected apps</li>
+                      <li>Unlimited memebers</li>
+                      <li>Up to 500 tasks updated per month</li>
+                    </ul>
+                  </div>
+                  <div css={ratesSubContainerstyles}>
+                    <h4>For busy teams</h4>
+                    <p>$5 /month /user</p>
+                    <a href="/">Try Kairn!</a>
+                    <ul>
+                      <li>BUSY PEOPLE FEATURES</li>
+                      <li>Unlimited tasks updates</li>
+                      <li>Activity log SOON</li>
+                      <li>Collaborative Workspace SOON</li>
+                    </ul>
+                  </div>
+                  <div css={ratesSubContainerstyles}>
+                    <h4>For big busy teams</h4>
+                    <p>$10 /month /user</p>
+                    <a href="/">Coming soon</a>
+                    <ul>
+                      <li>BUSY TEAMS FEATURES</li>
+                      <li>Permission management</li>
+                      <li>Admin tool</li>
+                      <li>Public boards &amp; guests</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
             </section>
           </div>
         </div>
       </main>
       <footer>footer</footer>
-    </div>
+    </>
   );
 }
 
