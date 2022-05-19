@@ -423,7 +423,7 @@ const rateHeadingParagraphStyles = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #222325;
 
   h2 {
     font-size: 50px;
@@ -440,8 +440,272 @@ const rateHeadingParagraphStyles = css`
 `;
 
 const ratesStyles = css`
-  max-width: 1240px;
+  max-width: 1100px;
+`;
+
+// Reviews
+const reviewsH2Styles = css`
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Montserrat', sans-serif !important;
+`;
+
+const reviewsStyles = css`
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+  max-height: 272px;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  background-color: snow;
+  box-shadow: 4px 4px black;
+  margin-bottom: 20px;
+
+  p {
+    padding-top: 10px;
+    color: #222325;
+    line-height: 21px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &.collective {
+    max-width: 240px;
+    max-height: 240px;
+  }
+
+  &.actionDesk {
+    max-width: 240px;
+    max-height: 220px;
+  }
+
+  &.unflow {
+    max-width: 240px;
+    max-height: 265px;
+  }
+
+  &.foodCheri {
+    max-width: 240px;
+    max-height: 325px;
+  }
+
+  &.trusty {
+    max-width: 240px;
+    max-height: 199px;
+  }
+
+  &.staycation {
+    max-width: 240px;
+    max-height: 230px;
+  }
+
+  &.clefDeVoute {
+    max-width: 240px;
+    max-height: 246px;
+  }
+`;
+
+const emojiStyles = css`
+  max-width: 40px;
+  max-height: 40px;
+`;
+
+const efoundersIconStyles = css`
+  max-width: 40px;
+  max-height: 40px;
+`;
+
+const actionDeskStyles = css`
+  max-width: 160px;
+  max-height: 25px;
+`;
+
+const collectiveStyles = css`
+  max-width: 160px;
+  max-height: 49px;
+`;
+
+const unflowStyles = css`
+  max-width: 117px;
+  max-height: 32px;
+`;
+
+const foodcheriStyles = css`
+  max-width: 160px;
+  max-height: 26px;
+`;
+
+const trustyStyles = css`
+  max-width: 93px;
+  max-height: 50px;
+`;
+
+const staycationStyles = css`
+  max-width: 160px;
+  max-height: 40px;
+`;
+
+const clefDeVouteStyles = css`
+  max-width: 50px;
+  max-height: 50px;
+`;
+
+const reviewerInfoStyles = css`
+  display: flex;
+  gap: 4px;
+
+  h5 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    padding-top: 5px;
+  }
+`;
+
+const couplesStyles = css`
+  display: flex;
+  flex-direction: column;
+`;
+
+const reviewsContainerStyles = css`
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+`;
+
+// mobile
+const mobileContainerStyles = css`
+  display: flex;
+  justify-content: space-between;
+  background-color: #7f9dff;
+  color: #fff;
+  max-width: 1400px;
+  max-height: 350px;
+  border-radius: 24px;
+  margin-top: 150px;
+  margin-left: 330px;
+  margin-right: 330px;
+`;
+
+const mobileH3ParagraphStyles = css`
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-bottom: 10px;
+
+  h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 35px;
+    line-height: 36px;
+  }
+
+  p {
+    margin-top: 19px;
+    padding-right: 40px;
+    padding-left: 0px;
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+    background-color: #222325;
+    border: 2px solid #222325;
+    color: white;
+    outline: none;
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 600;
+    max-width: 120px;
+    max-height: 59px;
+    padding: 9px 15px;
+
+    :after {
+      position: absolute;
+      width: 94%;
+      height: 94%;
+      left: -6px;
+      top: 6px;
+      border-radius: 4px;
+      border: 2px solid #222325 !important;
+      content: '';
+      z-index: 0;
+    }
+  }
+`;
+
+const mobileImgStyles = css`
+  max-width: 300px;
   max-height: 400px;
+  margin-top: -60px;
+  margin-right: 70px;
+`;
+
+// footer
+
+const footerContainerStyles = css`
+  display: flex;
+  flex-direction: column;
+  background-color: #222325;
+  color: #fff;
+  padding: 70px 240px 30px 240px;
+`;
+
+const footerLogoParagraphStyles = css`
+  display: flex;
+  flex-direction: column;
+
+  img {
+    max-width: 125px;
+    max-height: 38px;
+  }
+
+  p {
+    margin-bottom: 33px;
+  }
+`;
+
+const footerlogosStyles = css`
+  max-width: 50px;
+  max-height: 50px;
+  background-color: transparent;
+  border-radius: 3px;
+  margin: 5px;
+`;
+
+const footerFirstSubcontainerStyles = css`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+`;
+
+const footerSecondSubsectionStyles = css`
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.72);
+
+  a {
+    color: hsla(48, 0%, 100%, 0.63) !important;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+  }
+
+  p {
+    color: hsla(48, 0%, 100%, 0.63) !important;
+    margin-top: 30px;
+  }
 `;
 
 function App() {
@@ -682,23 +946,265 @@ function App() {
               </div>
               <br />
               <br />
+              <br />
               {/* rates */}
               <div css={rateHeadingParagraphStyles}>
                 <h2>Stop putting out fires, start achieving</h2>
                 <p>Currently in free beta save your early-bird spot!</p>
                 <br />
                 <br />
+                <img css={ratesStyles} src="/rates3.png" alt="rates" />
+                <br />
+                <br />
+                <br />
               </div>
-              <div css={ratesStyles}>
-                <img src="/rates2.npg" alt="rates" />
+              {/* Reviews */}
+              <div>
+                <h2 css={reviewsH2Styles}>People are loving Kairn!</h2>
+                <div css={reviewsContainerStyles}>
+                  {/* first couple */}
+                  <div css={couplesStyles}>
+                    <div css={reviewsStyles}>
+                      <img
+                        css={efoundersIconStyles}
+                        src="efounders-logo.png"
+                        alt="logo"
+                      />
+                      <p>
+                        I love how I can click on a task’s Notion link directly
+                        from Kairn.{' '}
+                        <strong>It saves me from searching everywhere</strong>{' '}
+                        and <strong>auto updates</strong>. Kairn frees up
+                        precious time in my day.
+                      </p>
+                      <div css={reviewerInfoStyles}>
+                        <img
+                          css={emojiStyles}
+                          src="/sarahBarron.png"
+                          alt="emoji"
+                        />
+                        <div>
+                          <h5>Sarah Barron</h5>
+                          <p>Content Ops Manager</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="collective" css={reviewsStyles}>
+                      <img
+                        css={collectiveStyles}
+                        src="/collective.png"
+                        alt="logo"
+                      />
+                      <p>
+                        I use Kairn everyday to <strong>balance the day</strong>{' '}
+                        with all projects and{' '}
+                        <strong>share priorities with the team</strong>.
+                      </p>
+                      <div css={reviewerInfoStyles}>
+                        <img
+                          css={emojiStyles}
+                          src="/remiLauer.png"
+                          alt="emoji"
+                        />
+                        <div>
+                          <h5>Rémi Lauer</h5>
+                          <p>Lead Growth</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* second couple */}
+                  <div css={couplesStyles}>
+                    <div className="actionDesk" css={reviewsStyles}>
+                      <img
+                        css={actionDeskStyles}
+                        src="actiondesk.svg"
+                        alt="logo"
+                      />
+                      <p>
+                        Kairn helps me{' '}
+                        <strong>stay on top of every thing I need to do</strong>{' '}
+                        in a simple and efficient manner
+                      </p>
+                      <div css={reviewerInfoStyles}>
+                        <img
+                          css={emojiStyles}
+                          src="/louisAdam.png"
+                          alt="emoji"
+                        />
+                        <div>
+                          <h5>Louis Adam</h5>
+                          <p>Chief of Staff</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="unflow" css={reviewsStyles}>
+                      <img css={unflowStyles} src="unflow.svg" alt="logo" />
+                      <p>
+                        Between calls, follow ups, and random ideas that pop
+                        into my head as the day goes on,{' '}
+                        <strong>
+                          Kairn has become my must have to keep busy days
+                          organised
+                        </strong>
+                        .
+                      </p>
+                      <div css={reviewerInfoStyles}>
+                        <img css={emojiStyles} src="/romy.png" alt="emoji" />
+                        <div>
+                          <h5>Romy Lynch</h5>
+                          <p>Co-founder &amp; CEO</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* third couple */}
+                  <div css={couplesStyles}>
+                    <div className="foodCheri" css={reviewsStyles}>
+                      <img
+                        css={foodcheriStyles}
+                        src="foodcheri.png"
+                        alt="logo"
+                      />
+                      <p>
+                        With Kairn, we’ve centralized the team's tasks and{' '}
+                        <strong>
+                          it’s made our discussions and priorities more
+                          structured
+                        </strong>
+                        . Boards and views help us ensure an exceptional level
+                        of service to our internal and external customers.
+                      </p>
+                      <div css={reviewerInfoStyles}>
+                        <img
+                          css={emojiStyles}
+                          src="/beardedman.png"
+                          alt="emoji"
+                        />
+                        <div>
+                          <h5>Laurent Partouche</h5>
+                          <p>Head of Product &amp; CS</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="trusty" css={reviewsStyles}>
+                      <img css={trustyStyles} src="trusty.svg" alt="logo" />
+                      <p>
+                        <strong>
+                          Your OPT + CMD + K has simply changed my life.
+                        </strong>
+                      </p>
+                      <div css={reviewerInfoStyles}>
+                        <img css={emojiStyles} src="edouard.png" alt="emoji" />
+                        <div>
+                          <h5>Edouard Peyruseigt</h5>
+                          <p>Co-founder &amp; CEO</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* fourth couple */}
+                  <div css={couplesStyles}>
+                    <div className="staycation" css={reviewsStyles}>
+                      <img
+                        css={staycationStyles}
+                        src="staycation.png"
+                        alt="logo"
+                      />
+                      <p>
+                        I've been using Kairn for months and it's{' '}
+                        <strong>become a must have in my day</strong> to keep
+                        everything in check.
+                      </p>
+                      <div css={reviewerInfoStyles}>
+                        <img css={emojiStyles} src="/mathieu.png" alt="emoji" />
+                        <div>
+                          <h5>Mathieu Dugast</h5>
+                          <p>Co-founder</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="clefDeVoute" css={reviewsStyles}>
+                      <img
+                        css={clefDeVouteStyles}
+                        src="clef-de-voute.jpeg"
+                        alt="logo"
+                      />
+                      <p>
+                        Kairn has become{' '}
+                        <strong>the crucial app I open in the morning</strong>{' '}
+                        to start and structure my day.
+                      </p>
+                      <div css={reviewerInfoStyles}>
+                        <img
+                          css={emojiStyles}
+                          src="/thumbsup.png"
+                          alt="emoji"
+                        />
+                        <div>
+                          <h5>Timothé Frin</h5>
+                          <p>Podcast Host</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <br />
+              <br />
+              <div css={mobileContainerStyles}>
+                <div css={mobileH3ParagraphStyles}>
+                  <h3>
+                    It's time to get <br /> a great day
+                  </h3>
+                  <p>
+                    Kairn iOS stays with you on the go no matter where and{' '}
+                    <br /> when.
+                  </p>
+                  <a>Try Kairn!</a>
+                </div>
+                <img css={mobileImgStyles} src="/mobile.png" alt="smartphone" />
+              </div>
+              <br />
               <br />
               <br />
             </section>
           </div>
         </div>
       </main>
-      <footer>footer</footer>
+      <footer>
+        <div css={footerContainerStyles}>
+          <div css={footerFirstSubcontainerStyles}>
+            <div css={footerLogoParagraphStyles}>
+              <img src="/logowhitekairn.svg" alt="kairn logo" />
+              <p>Your daily project management app to get great days</p>
+            </div>
+            <div>
+              <img
+                css={footerlogosStyles}
+                src="/logotwitter.svg"
+                alt="twitter logo"
+              />
+              <img css={footerlogosStyles} src="/logomedium.svg" alt="M logo" />
+              <img
+                css={footerlogosStyles}
+                src="/logolinkedin.svg"
+                alt="Linkedin logo"
+              />
+            </div>
+          </div>
+          <div css={footerSecondSubsectionStyles}>
+            <p>
+              Crafted with love by <a>Alasta</a> &amp; <a>della mattia</a>
+            </p>
+            <p>
+              Legal doc • &nbsp;
+              <a>Privacy</a> • &nbsp;
+              <a>Terms of use</a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
